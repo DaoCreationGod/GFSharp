@@ -1,0 +1,30 @@
+#In "FileReader.cpp"
+file: A pointer to a FILE object, representing the file to be read. It is of type FILE*.
+
+original: A fpos_t object, used to store the current position of the file pointer so that it can be restored after the file size is obtained.
+
+out: A long integer representing the size of the file.
+
+path: A char* string representing the file path.
+
+contents: A char* string representing the contents of the file.
+
+write_it: A char* pointer that keeps track of the current position in the contents string while reading from the file.
+
+bytes_read: A size_t integer representing the number of bytes read from the file so far.
+
+bytes_read_this_iteration: A size_t integer representing the number of bytes read from the file in the current iteration of the loop.
+
+argc: An int representing the number of arguments passed to the program.
+
+argv: A char** array representing the arguments passed to the program.
+
+source: A char* string representing the source code.
+
+beg: A char** pointer used to store the start of a token in the source code.
+
+end: A char** pointer used to store the end of a token in the source code.
+
+err: An object of type Error that is used to store any error messages that may occur while lexing the source code.
+
+ok: An object of type Error representing a successful operation, with type set to ERROR_NONE and msg set to NULL.

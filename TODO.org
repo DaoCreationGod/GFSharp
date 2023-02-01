@@ -1,0 +1,20 @@
+Lex Source into tokens []
+
+Parse tokens into AST, a tree containing data about the program []
+
+Compile AST into assembly, let's start with x86_64? []
+
+Rules to go after and make:
+Variables will be defined in a variable function called: variables(){}, the type is is declared in the paranteses, and the variables themselves need a $-sign first to be correct.
+VariableNameAI, an AI which checks that the variable names follow the right rules. The variables need to be whole words with each nextcomming word in it to be a capital letter or have an underscore (_) between each of them and a capital letter after it e.g. VariableName or Variable_Name
+Autocomplete, it should autocomplete functions etc.
+The types of comments should be plenty. The types should be ## (single row), /**/ (multi row), // (single row), <!----> (multi row)
+The library calls follow : #include(), with the specific library inside the paranteses, can be used to call other files with '' or ""
+Predefined functions first words first letter is lower-case example: goto is goTo.
+Some important functions : global:{}, as long as the file is included so can you call on anything which is defined in this function; globalPrivate:{}, only the current file which it is in can call the things which are defined in it; globalLocked:{}, only itself has access to the things defined in it.
+Semicolon is important, semicolon ends the row/line (exception is curlybrackets which doesn't need one after).
+As a standard it should include : ctime, cmath, arithm, iostream. Which is needed to be included in C++.
+The lexical rules should be the same as other C-languages except you should be able to do things like !<=
+
+
+The example code in example.org should work.

@@ -1,0 +1,30 @@
+#include("mainfile");
+
+global:{
+    variables(int):{
+        $WalletMoney = 100;
+    }
+
+    variables(string):{
+        $Answer = "";
+    }
+
+    variables(array):{
+        $AvailableGames = ["Chess", "Go", "Risk"];
+    }
+
+    doWhile($WalletMoney >= 100){
+        writeOut("Your wallet have 100 or more in it.");
+    } else {
+        writeOut("You have less than 100 in your wallet.");
+        writeOut("Do you wanna try to win some money? (y/n): " $Answer);
+        writeIn($Answer);
+        if($Answer == "y" || "Y"){
+            writeOut("Here we have some games you can play to win some money: ");
+        } else if($Answer == "n" || "N"){
+            writeOut("Okey, so you do not want to win some money. You have: " + $WalletMoney + " in your wallet");
+        } else {
+            writeOut("Wrong, you need to choose between y/Y and n/N.");
+        }
+    }
+}
